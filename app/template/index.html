@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>numtect</title>
+</head>
+<body>
+    <div class="main">
+        <h1>numtect</h1>
+        <form method="post" action="{{url_for('index')}}">
+            <input type="file" name="image" accept=".jpg, .jpeg, .png,">
+            <button type="submit">submit</button>
+        </form>
+        {%if request.method == "POST"%}
+        <h2>{{prediction}}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
